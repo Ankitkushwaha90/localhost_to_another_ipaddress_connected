@@ -1,9 +1,13 @@
+const Highlight = ({ children }) => (
+  <span style={{ backgroundColor: 'yellow', padding: '0.2em' }}>{children}</span>
+);
+
 ## Understanding iptables (Linux Firewall) with Examples
 iptables is a powerful utility in Linux used to configure, maintain, and inspect the IP packet filter rules. These rules control the flow of network traffic to, from, and within a system.
 
 iptables works with tables, chains, and rules. Here’s a breakdown of these components:
 
-- <mark>Tables:</mark> A table contains chains that are used to process network packets.
+- **Tables:** A table contains chains that are used to process network packets.
 - <Highlight>Filter Table (default):</Highlight> Used for filtering packets (accept, reject, drop).
 - <Highlight>NAT Table:</Highlight> Used for Network Address Translation (NAT) like port forwarding.
 - <Highlight>Mangle Table:</Highlight> Used for modifying packet headers.
