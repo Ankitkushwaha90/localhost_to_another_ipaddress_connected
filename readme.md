@@ -14,24 +14,24 @@ For example, to forward traffic from localhost:8080 to 172.16.2.37:8080, you can
 sudo iptables -t nat -A OUTPUT -p tcp --dport 8080 -d 127.0.0.1 -j DNAT --to-destination 172.16.2.37:8080
 ```
 This command does the following:
+- -t nat: Specifies that you’re working with the NAT (Network Address Translation) table.
+- -A OUTPUT: Adds a rule to the output chain (outgoing traffic).
+- --dport 8080: Specifies the destination port you are forwarding.
+- -d 127.0.0.1: The destination address (localhost).
+- -j DNAT: Tells iptables to perform a Destination NAT, redirecting packets to a new IP address and port.
 
--t nat: Specifies that you’re working with the NAT (Network Address Translation) table.
--A OUTPUT: Adds a rule to the output chain (outgoing traffic).
---dport 8080: Specifies the destination port you are forwarding.
--d 127.0.0.1: The destination address (localhost).
--j DNAT: Tells iptables to perform a Destination NAT, redirecting packets to a new IP address and port.
 --to-destination 172.16.2.37:8080: The new destination IP and port to which the traffic will be forwarded.
-2. Using SSH Tunneling (Port Forwarding):
+## 2. Using SSH Tunneling (Port Forwarding):
 If you're working with SSH and want to forward a port from your local machine to the remote server at 172.16.2.37, you can use SSH tunneling.
 
 Here’s an example of forwarding localhost port 8080 to 172.16.2.37:8080:
 
-bash
-Copy code
+```bash
 ssh -L 8080:172.16.2.37:8080 user@localhost
+```
 This forwards any traffic sent to localhost:8080 to 172.16.2.37:8080.
 
-3. Using a Proxy Server:
+## 3. Using a Proxy Server:
 Another way to forward traffic from localhost to 172.16.2.37 is to set up a proxy server, such as nginx, which can listen on localhost and forward traffic to 172.16.2.37.
 
 Here’s an example configuration for nginx:
