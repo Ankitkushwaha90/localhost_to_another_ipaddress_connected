@@ -18,7 +18,7 @@ iptables works with tables, chains, and rules. Here’s a breakdown of these com
 - **FORWARD:** For packets that are routed through the system.
 - **PREROUTING:** For altering packets before routing.
 - **POSTROUTING:** For altering packets after routing.
-- Rules: Each chain has a set of rules that match packet characteristics like source IP, destination port, etc. Each rule can specify an action (accept, reject, drop, etc.) if a match is found.
+- **Rules**: Each chain has a set of rules that match packet characteristics like source IP, destination port, etc. Each rule can specify an action (accept, reject, drop, etc.) if a match is found.
 
 ## Basic Syntax of iptables
 ```bash
