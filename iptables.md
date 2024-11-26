@@ -3,7 +3,7 @@ iptables is a powerful utility in Linux used to configure, maintain, and inspect
 
 iptables works with tables, chains, and rules. Here’s a breakdown of these components:
 
-- <Highlight>Tables:</Highlight> A table contains chains that are used to process network packets.
+- <mark>Tables:</mark> A table contains chains that are used to process network packets.
 - <Highlight>Filter Table (default):</Highlight> Used for filtering packets (accept, reject, drop).
 - <Highlight>NAT Table:</Highlight> Used for Network Address Translation (NAT) like port forwarding.
 - <Highlight>Mangle Table:</Highlight> Used for modifying packet headers.
