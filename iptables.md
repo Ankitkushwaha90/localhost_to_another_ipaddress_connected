@@ -8,16 +8,16 @@ iptables is a powerful utility in Linux used to configure, maintain, and inspect
 iptables works with tables, chains, and rules. Here’s a breakdown of these components:
 
 - **Tables:** A table contains chains that are used to process network packets.
-- <Highlight>Filter Table (default):</Highlight> Used for filtering packets (accept, reject, drop).
-- <Highlight>NAT Table:</Highlight> Used for Network Address Translation (NAT) like port forwarding.
-- <Highlight>Mangle Table:</Highlight> Used for modifying packet headers.
-- <Highlight>Raw Table:</Highlight> Used for setting up rules before connection tracking starts.
-- <Highlight>Chains:</Highlight> Each table has a set of predefined chains where rules are applied:
-- <Highlight>INPUT:</Highlight> For incoming packets (from network to the system).
-- <Highlight>OUTPUT:</Highlight> For outgoing packets (from the system to the network).
-- <Highlight>FORWARD:</Highlight> For packets that are routed through the system.
-- <Highlight>PREROUTING:</Highlight> For altering packets before routing.
-- <Highlight>POSTROUTING:</Highlight> For altering packets after routing.
+- **Filter Table (default):** Used for filtering packets (accept, reject, drop).
+- **NAT Table:** Used for Network Address Translation (NAT) like port forwarding.
+- **Mangle Table:** Used for modifying packet headers.
+- **Raw Table:** Used for setting up rules before connection tracking starts.
+- **Chains:** Each table has a set of predefined chains where rules are applied:
+- **INPUT:** For incoming packets (from network to the system).
+- **OUTPUT:** For outgoing packets (from the system to the network).
+- **FORWARD:** For packets that are routed through the system.
+- **PREROUTING:** For altering packets before routing.
+- **POSTROUTING:** For altering packets after routing.
 - Rules: Each chain has a set of rules that match packet characteristics like source IP, destination port, etc. Each rule can specify an action (accept, reject, drop, etc.) if a match is found.
 
 ## Basic Syntax of iptables
